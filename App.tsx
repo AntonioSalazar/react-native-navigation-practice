@@ -1,10 +1,10 @@
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {View, Text} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import StackNavigation from './src/navigation/stackNavigation';
 const App = () => {
   return (
     <NavigationContainer>
-      <Text>Hey there!! Doing well? Still working?</Text>
+      <StackNavigation />
     </NavigationContainer>
   );
 };
