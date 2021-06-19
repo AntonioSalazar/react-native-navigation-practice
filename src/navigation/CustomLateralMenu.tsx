@@ -8,6 +8,7 @@ import {
 import StackNavigation from './stackNavigation';
 import SettingsScreen from '../screens/SettingsScreen';
 import {styles} from '../theme/appTheme';
+import Tabs from './Tabs';
 import {
   useWindowDimensions,
   Text,
@@ -25,7 +26,7 @@ const CustomLateralMenu = () => {
     <Drawer.Navigator
       drawerType={width >= 768 ? 'permanent' : 'front'}
       drawerContent={props => <CustomeMenu {...props} />}>
-      <Drawer.Screen name="StackNavigation" component={StackNavigation} />
+      <Drawer.Screen name="Tabs" component={Tabs} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
     </Drawer.Navigator>
   );
@@ -50,8 +51,8 @@ const CustomeMenu = ({
 
       {/* menu options */}
       <View style={styles.drawerLinksContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('Page1Screen')}>
-          <Text style={styles.drawerLinks}>Home</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Tabs')}>
+          <Text style={styles.drawerLinks}>Navigation Tabs</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('SettingsScreen')}>
           <Text style={styles.drawerLinks}>Settings</Text>
