@@ -4,8 +4,21 @@ import Page1Screen from '../screens/Page1Screen';
 import Page2Screen from '../screens/Page2Screen';
 import Page3Screen from '../screens/Page3Screen';
 import Page4Screen from '../screens/Page4Screen';
+import ProfileScreen from '../screens/ProfileScreen';
 
-const Stack = createStackNavigator();
+export type RootStackParams = {
+  Page1Screen: undefined;
+  Page2Screen: undefined;
+  Page3Screen: undefined;
+  Page4Screen: undefined;
+  ProfileScreen: {
+    id: number;
+    name: string;
+    age: number;
+  };
+};
+
+const Stack = createStackNavigator<RootStackParams>();
 
 const StackNavigation = () => {
   return (
@@ -29,6 +42,12 @@ const StackNavigation = () => {
         name="Page4Screen"
         options={{title: 'Pagina 4'}}
         component={Page4Screen}
+      />
+
+      <Stack.Screen
+        name="ProfileScreen"
+        options={{title: ''}}
+        component={ProfileScreen}
       />
     </Stack.Navigator>
   );
