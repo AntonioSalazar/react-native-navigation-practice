@@ -26,6 +26,10 @@ export const styles = StyleSheet.create({
     fontSize: 20,
   },
 
+  menuBtn: {
+    marginLeft: 20,
+  },
+
   drawerContainer: {
     backgroundColor: 'red',
   },
@@ -45,8 +49,13 @@ export const styles = StyleSheet.create({
     marginLeft: 15,
   },
 
+  linksContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
   drawerLinks: {
     fontSize: 25,
-    margin: 10,
+    marginLeft: 10,
   },
 });

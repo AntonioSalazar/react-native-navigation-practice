@@ -5,10 +5,10 @@ import {
   DrawerContentOptions,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
-import StackNavigation from './stackNavigation';
 import SettingsScreen from '../screens/SettingsScreen';
-import {styles} from '../theme/appTheme';
-import Tabs from './Tabs';
+import {styles, colors} from '../theme/appTheme';
+import {Tabs} from './Tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {
   useWindowDimensions,
   Text,
@@ -41,6 +41,7 @@ const CustomeMenu = ({
     <DrawerContentScrollView>
       {/* avatar container */}
       <View style={styles.avatarContainer}>
+        <Text></Text>
         <Image
           source={{
             uri: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
@@ -50,11 +51,27 @@ const CustomeMenu = ({
       </View>
 
       {/* menu options */}
+
       <View style={styles.drawerLinksContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('Tabs')}>
-          <Text style={styles.drawerLinks}>Navigation Tabs</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Tabs')}
+          style={styles.linksContainer}>
+          <Text>
+            <Icon
+              name="chatbox-ellipses-outline"
+              size={30}
+              color={colors.primary}
+            />
+          </Text>
+          <Text style={styles.drawerLinks}>Navigation Settings</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('SettingsScreen')}>
+
+        <TouchableOpacity
+          onPress={() => navigation.navigate('SettingsScreen')}
+          style={styles.linksContainer}>
+          <Text>
+            <Icon name="cog-outline" size={30} color={colors.primary} />
+          </Text>
           <Text style={styles.drawerLinks}>Settings</Text>
         </TouchableOpacity>
       </View>

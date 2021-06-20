@@ -1,9 +1,10 @@
 // import {StackScreenProps} from '@react-navigation/stack';
 import React from 'react';
 import {View, Text, TouchableOpacity, Button} from 'react-native';
-import {styles} from '../theme/appTheme';
+import {styles, colors} from '../theme/appTheme';
 import {useEffect} from 'react';
 import {DrawerScreenProps} from '@react-navigation/drawer';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 interface Props extends DrawerScreenProps<any, any> {}
 
@@ -11,7 +12,14 @@ const Page1Screen = ({navigation}: Props) => {
   useEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
-        <Button title="Menu" onPress={() => navigation.toggleDrawer()} />
+        // <Button title="Menu" onPress={() => navigation.toggleDrawer()} />
+        <Icon
+          name="save-outline"
+          size={30}
+          color={colors.primary}
+          onPress={() => navigation.toggleDrawer()}
+          style={styles.menuBtn}
+        />
       ),
     });
   }, []);
