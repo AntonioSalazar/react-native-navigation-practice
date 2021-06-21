@@ -6,9 +6,9 @@ import {styles, colors} from '../theme/appTheme';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const Tab1Screen = () => {
-  useEffect(() => {
-    console.log('tab1 ');
-  }, []);
+  // useEffect(() => {
+  //   console.log('tab1 ');
+  // }, []);
 
   const {top} = useSafeAreaInsets();
 

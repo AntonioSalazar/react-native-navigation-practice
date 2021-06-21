@@ -13,13 +13,15 @@ const Page1Screen = ({navigation}: Props) => {
     navigation.setOptions({
       headerLeft: () => (
         // <Button title="Menu" onPress={() => navigation.toggleDrawer()} />
-        <Icon
-          name="save-outline"
-          size={30}
-          color={colors.primary}
-          onPress={() => navigation.toggleDrawer()}
-          style={styles.menuBtn}
-        />
+        <TouchableOpacity>
+          <Icon
+            name="menu-outline"
+            size={30}
+            color={colors.primary}
+            onPress={() => navigation.toggleDrawer()}
+            style={styles.menuBtn}
+          />
+        </TouchableOpacity>
       ),
     });
   }, []);
@@ -49,6 +51,9 @@ const Page1Screen = ({navigation}: Props) => {
             age: 27,
           });
         }}>
+        <Text style={styles.userIcon}>
+          <Icon name="person-outline" size={30} color={colors.black} />
+        </Text>
         <Text style={styles.mainButtonText}>Antonio Profile</Text>
       </TouchableOpacity>
       <TouchableOpacity
@@ -64,6 +69,9 @@ const Page1Screen = ({navigation}: Props) => {
             age: 29,
           });
         }}>
+        <Text style={styles.userIcon}>
+          <Icon name="person-outline" size={30} color={colors.black} />
+        </Text>
         <Text style={styles.mainButtonText}>Aris Profile</Text>
       </TouchableOpacity>
     </View>

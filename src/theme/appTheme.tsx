@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export const colors = {
   primary: '#5856d6',
+  black: '#000',
 };
 
 export const styles = StyleSheet.create({
@@ -19,11 +20,16 @@ export const styles = StyleSheet.create({
     padding: 30,
     alignItems: 'center',
     borderRadius: 40,
+    flexDirection: 'row',
   },
 
   mainButtonText: {
     color: 'white',
     fontSize: 20,
+  },
+
+  userIcon: {
+    marginRight: 50,
   },
 
   menuBtn: {
@@ -57,5 +63,9 @@ export const styles = StyleSheet.create({
   drawerLinks: {
     fontSize: 25,
     marginLeft: 10,
+  },
+
+  settingsText: {
+    marginLeft: 20,
   },
 });
