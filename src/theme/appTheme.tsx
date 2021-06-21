@@ -68,4 +68,23 @@ export const styles = StyleSheet.create({
   settingsText: {
     marginLeft: 20,
   },
+
+  contactsContainer: {
+    alignItems: 'center',
+  },
+
+  signInBtn: {
+    backgroundColor: colors.primary,
+    width: 90,
+    height: 70,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
+  },
+
+  signInTxt: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 });
